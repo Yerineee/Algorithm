@@ -1,14 +1,14 @@
-package µ¿¾Æ¸®_0714;
+package ë™ì•„ë¦¬_0714;
 
 import java.util.Scanner;
 public class baekjoon_1008 {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		
-		double A=sc.nextDouble();	// Á¤¼ö A ÀÔ·Â
-		double B=sc.nextDouble();	// Á¤¼ö B ÀÔ·Â
+		double A=sc.nextDouble();	// ì •ìˆ˜ A ì…ë ¥
+		double B=sc.nextDouble();	// ì •ìˆ˜ B ì…ë ¥
 		
-		System.out.println(A/B);// A/B Ãâ·Â
+		System.out.println(A/B);// A/B ì¶œë ¥
 		
 		sc.close();
 	}
