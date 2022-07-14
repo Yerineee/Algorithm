@@ -1,0 +1,26 @@
+package 초급_1회차;
+
+import java.util.*;
+import java.io.*;
+
+public class BOJ_2750 {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb=new StringBuilder();
+		
+		int N=Integer.parseInt(br.readLine());
+		int[] num=new int[N];
+		
+		for(int i=0;i<N;i++) {
+			num[i]=Integer.parseInt(br.readLine());
+		}
+		
+		Arrays.sort(num);
+		
+		for(int i=0;i<N;i++) {
+			sb.append(num[i]+"\n");
+		}
+		
+		System.out.println(sb.toString().trim());
+	}
+}
