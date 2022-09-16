@@ -1,5 +1,3 @@
-package ÇÏ;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -7,7 +5,7 @@ import java.util.Scanner;
 
 public class BOJ_10825 {
 	
-	static class Student { // Student ±¸Á¶Ã¼¸¦ Á¤ÀÇÇÕ´Ï´Ù
+	static class Student { // Student êµ¬ì¡°ì²´ë¥¼ ì •ì˜í•©ë‹ˆë‹¤
 		String name;
 		int kor;
 		int eng;
@@ -23,9 +21,9 @@ public class BOJ_10825 {
 	
     public static ArrayList<String> solution(int N, String [] name, int [] kor, int [] eng, int [] math){
     	ArrayList <String> answer = new ArrayList<>();
-    	ArrayList <Student> list = new ArrayList<>(); // StudentµéÀ» ´ãÀ» ArrayList¸¦ »ı¼ºÇÕ´Ï´Ù
+    	ArrayList <Student> list = new ArrayList<>(); // Studentë“¤ì„ ë‹´ì„ ArrayListë¥¼ ìƒì„±í•©ë‹ˆë‹¤
    
-		//ÇÊ¿äÇÑ ÄÚµå¸¦ ÀÛ¼ºÇÕ´Ï´Ù.
+		//í•„ìš”í•œ ì½”ë“œë¥¼ ì‘ì„±í•©ë‹ˆë‹¤.
 		for(int i=0;i<N;i++) {
 			list.add(new Student(name[i],kor[i],eng[i],math[i]));
 		}
