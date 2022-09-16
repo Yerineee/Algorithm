@@ -1,2 +1,2 @@
-# BOJ_study
-BOJ 문제 풀이 코드
+# Algorithm_study
+알고리즘 공부
