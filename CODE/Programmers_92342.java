@@ -1,13 +1,11 @@
-package Áß;
-
 import java.util.Arrays;
 
 public class Programmers_92342 {
 	int[] answer;
     int[] ryan;
-    int maxDiff=0;  // ÃÖ´ë Á¡¼ö Â÷
+    int maxDiff=0;  // ìµœëŒ€ ì ìˆ˜ ì°¨
     
-    // Á¡¼ö Â÷ÀÌ °°À» ¶§ °¡Àå ³·Àº Á¡¼ö ´õ ¸¹ÀÌ ¸ÂÇû´ÂÁö ºñ±³ÇÏ±â
+    // ì ìˆ˜ ì°¨ì´ ê°™ì„ ë•Œ ê°€ì¥ ë‚®ì€ ì ìˆ˜ ë” ë§ì´ ë§í˜”ëŠ”ì§€ ë¹„êµí•˜ê¸°
     public boolean compare() {
         for(int i=10;i>=0;i--) {
             if(ryan[i]>answer[i]) {
@@ -21,10 +19,10 @@ public class Programmers_92342 {
         return false;
     }
     
-    // Á¡¼ö °è»ê
+    // ì ìˆ˜ ê³„ì‚°
     public void calcScore(int[] apeach) {
-        int apeachScore=0;  // ¾îÇÇÄ¡ Á¡¼ö
-        int ryanScore=0;    // ¶óÀÌ¾ğ Á¡¼ö
+        int apeachScore=0;  // ì–´í”¼ì¹˜ ì ìˆ˜
+        int ryanScore=0;    // ë¼ì´ì–¸ ì ìˆ˜
         
         for(int i=0;i<11;i++) {
             if(ryan[i]>apeach[i]) {
@@ -35,12 +33,12 @@ public class Programmers_92342 {
             }
         }
         
-        int diff=ryanScore-apeachScore; // Á¡¼ö Â÷
+        int diff=ryanScore-apeachScore; // ì ìˆ˜ ì°¨
         if(diff>0 && diff>=maxDiff) {
-            // ÃÖÀûÀÇ °æ¿ì°¡ ¾Æ´Ò °æ¿ì¿¡´Â °»½ÅÇÏÁö ¾ÊÀ½
+            // ìµœì ì˜ ê²½ìš°ê°€ ì•„ë‹ ê²½ìš°ì—ëŠ” ê°±ì‹ í•˜ì§€ ì•ŠìŒ
             if(diff==maxDiff && !compare())
                 return;
-            // ÃÖÀûÀÇ °æ¿ì
+            // ìµœì ì˜ ê²½ìš°
             maxDiff=diff;
             for(int i=0;i<11;i++) {
                 answer[i]=ryan[i];
@@ -49,7 +47,7 @@ public class Programmers_92342 {
         
     }
     
-    // ¶óÀÌ¾ğÀÌ È­»ì ½î´Â °æ¿ì
+    // ë¼ì´ì–¸ì´ í™”ì‚´ ì˜ëŠ” ê²½ìš°
     public void solve(int idx, int arrow, int[] apeach) {
         if(idx==11 || arrow==0) {
             ryan[10]+=arrow;
@@ -58,14 +56,14 @@ public class Programmers_92342 {
             return;
         }
         
-        // ¾îÇÇÄ¡°¡ ÇØ´ç Á¡¼ö¿¡ ¸ÂÈù È­»ì °³¼öº¸´Ù ¶óÀÌ¾ğÀÌ ÇöÀç º¸À¯ÇÑ È­»ìÀÌ ´õ ¸¹Àº °æ¿ì
+        // ì–´í”¼ì¹˜ê°€ í•´ë‹¹ ì ìˆ˜ì— ë§íŒ í™”ì‚´ ê°œìˆ˜ë³´ë‹¤ ë¼ì´ì–¸ì´ í˜„ì¬ ë³´ìœ í•œ í™”ì‚´ì´ ë” ë§ì€ ê²½ìš°
         if(apeach[idx]<arrow) {
             ryan[idx]+=apeach[idx]+1;
             solve(idx+1,arrow-apeach[idx]-1,apeach);
             ryan[idx]-=apeach[idx]+1;
         }
         
-        // ÇØ´ç Á¡¼ö¿¡ È­»ìÀ» ½îÁö ¾Ê´Â °æ¿ì
+        // í•´ë‹¹ ì ìˆ˜ì— í™”ì‚´ì„ ì˜ì§€ ì•ŠëŠ” ê²½ìš°
         solve(idx+1,arrow,apeach);
     }
     
@@ -77,7 +75,7 @@ public class Programmers_92342 {
         
         solve(0,n,info);
         
-        // ¾îÇÇÄ¡ Á¡¼öº¸´Ù ³·°Å³ª °°Àº °æ¿ì
+        // ì–´í”¼ì¹˜ ì ìˆ˜ë³´ë‹¤ ë‚®ê±°ë‚˜ ê°™ì€ ê²½ìš°
         if(answer[0]==-1) {
             int[] loose={-1};
             return loose;
