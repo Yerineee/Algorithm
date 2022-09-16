@@ -1,6 +1,5 @@
-package го;
-
 import java.util.Arrays;
+
 public class Programmers_42862 {
 	public static int solution(int n, int[] lost, int[] reserve) {
         int answer = 0;
