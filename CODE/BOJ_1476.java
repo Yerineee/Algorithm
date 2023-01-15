@@ -12,16 +12,16 @@ public class BOJ_1476 {
 
 		int i=0, year;
 		while(true) {
-			year=E+15*i;
-			if(year-S>=0 && (year-S)%28==0) {
-				if(year-M>=0 && (year-M)%19==0) {
-					break;
+			year=E+15*i;	//연도
+			if(year-S>=0 && (year-S)%28==0) {	// 만약 (해당 연도-S)가 0보다 크거나 같고 28로 나누어떨어지고
+				if(year-M>=0 && (year-M)%19==0) { // 만약 (해당 연도-M)가 0보다 크거나 같고 19로 나누어떨어지면
+					break;	// 반복문 종료
 				}
 			}
 			
 			i++;
 		}	
 		
-		System.out.printf("%d", year);
+		System.out.printf("%d", year);	// 연도 출력
 	}
 }
