@@ -4,6 +4,7 @@ let line = fs.readFileSync('dev/stdin').toString().split('\n');
 let input = line[0].split(' ');
 let H = parseInt(input[0]);
 let M = parseInt(input[1]);
+// let [H, M] = line[0].split(' ').map(Number);
 
 if(M<45) {
     H-=1;
