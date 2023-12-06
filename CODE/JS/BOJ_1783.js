@@ -6,6 +6,7 @@ const N = input[0];
 let answer = 0;
 
 if (N === 1) answer = 1;
+/* 아래 코드 else if (N === 2) answer = Math.min(Math.floor((M + 1) / 2), 4); 로 대체 가능 */
 else if (N === 2) answer = Math.min(parseInt((M + 1) / 2), 4);
 else if (N >= 3) {
   if (M < 7) answer = Math.min(M, 4);
