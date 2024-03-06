@@ -1,5 +1,3 @@
-package ÃÊ±Ş_1È¸Â÷;
-
 import java.util.*;
 import java.io.*;
 
@@ -14,14 +12,14 @@ public class BOJ_11651 {
 		for(int i=0;i<N;i++) {
 			StringTokenizer st=new StringTokenizer(br.readLine());
 			
-			num[i][0]=Integer.parseInt(st.nextToken());	// xÁÂÇ¥
-			num[i][1]=Integer.parseInt(st.nextToken());	// yÁÂÇ¥
+			num[i][0]=Integer.parseInt(st.nextToken());	// xì¢Œí‘œ
+			num[i][1]=Integer.parseInt(st.nextToken());	// yì¢Œí‘œ
 		}
 		
 		Arrays.sort(num, new Comparator<int[]>() {
 			@Override
 			public int compare(int[] o1, int[] o2) {
-				return o1[1]!=o2[1] ? o1[1]-o2[1] : o1[0]-o2[0]; // yÁÂÇ¥ Áõ°¡ÇÏ´Â ¼ø -> xÁÂÇ¥ Áõ°¡ÇÏ´Â ¼ø
+				return o1[1]!=o2[1] ? o1[1]-o2[1] : o1[0]-o2[0]; // yì¢Œí‘œ ì¦ê°€í•˜ëŠ” ìˆœ -> xì¢Œí‘œ ì¦ê°€í•˜ëŠ” ìˆœ
 			}
 		});
 		
