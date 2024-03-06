@@ -1,5 +1,3 @@
-package 초급_1회차;
-
 import java.util.*;
 import java.io.*;
 
