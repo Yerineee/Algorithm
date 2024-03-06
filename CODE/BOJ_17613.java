@@ -1,5 +1,4 @@
-package Áß±Ş_1ÁÖÂ÷;
-/*https://onedaycoding.tistory.com/235 Âü°íÇÔ*/
+/*https://onedaycoding.tistory.com/235 ì°¸ê³ í•¨*/
 
 import java.io.*;
 import java.util.*;
@@ -7,7 +6,7 @@ import java.util.*;
 public class BOJ_17613 {
 	static int[] arr;
 	
-	public static int getIdx(int n) {	// ÇØ´ç ¼ıÀÚ°¡ Æ÷ÇÔµÇ´Â ±¸°£ ±¸ÇÏ±â
+	public static int getIdx(int n) {	// í•´ë‹¹ ìˆ«ìê°€ í¬í•¨ë˜ëŠ” êµ¬ê°„ êµ¬í•˜ê¸°
 		int i;
 		for(i=1;i<30;i++) {
 			if(arr[i]>n) break;
@@ -16,7 +15,7 @@ public class BOJ_17613 {
 		return i-1;
 	}
 	
-	public static int jump(int n) {	// ÇØ´ç ±¸°£ÀÇ Á¡ÇÁ³Ñ¹öµé Áß ÃÖ´ñ°ª ±¸ÇÏ±â
+	public static int jump(int n) {	// í•´ë‹¹ êµ¬ê°„ì˜ ì í”„ë„˜ë²„ë“¤ ì¤‘ ìµœëŒ“ê°’ êµ¬í•˜ê¸°
 		return n*(n+1)/2+1;
 	}
 	
@@ -27,7 +26,7 @@ public class BOJ_17613 {
 		if(x==0 && y==0) return n;
 		
 		while(true) {
-			idx=getIdx(end);	// ±¸°£ ¾Ë¾Æ³»±â
+			idx=getIdx(end);	// êµ¬ê°„ ì•Œì•„ë‚´ê¸°
 			if(arr[idx] <= x) break;
 			
 			if(arr[idx]*2==end) 
@@ -54,10 +53,10 @@ public class BOJ_17613 {
 		
 		arr[1]=1;
 		for(int i=2;i<30;i++) {
-			arr[i]=2*arr[i-1]+1;	// Á¡ÇÁ °£°İ ´õÇØ³ª°¨
+			arr[i]=2*arr[i-1]+1;	// ì í”„ ê°„ê²© ë”í•´ë‚˜ê°
 		}
 		
-		for(int i=0;i<T;i++) {	// T¹ø ¹İº¹
+		for(int i=0;i<T;i++) {	// Të²ˆ ë°˜ë³µ
 			StringTokenizer st=new StringTokenizer(br.readLine());
 			
 			int x=Integer.parseInt(st.nextToken());
