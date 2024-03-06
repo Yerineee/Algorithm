@@ -1,5 +1,3 @@
-package Áß±Ş_1ÁÖÂ÷;
-
 import java.util.*;
 import java.io.*;
 
@@ -7,7 +5,7 @@ public class BOJ_21870 {
 	static int[] S;
 	static int N;
 	
-	public static int gcd(int a, int b) {	// À¯Å¬¸®µå È£Á¦¹ı (GCD ±¸ÇÏ±â)
+	public static int gcd(int a, int b) {	// ìœ í´ë¦¬ë“œ í˜¸ì œë²• (GCD êµ¬í•˜ê¸°)
 		while(b!=0) {
 			int tmp = a;
 			a = b;
@@ -40,8 +38,8 @@ public class BOJ_21870 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb=new StringBuilder();
 		
-		N = Integer.parseInt(br.readLine());	// Á¤¼ö N
-		S= new int[N];	// ¸Å¹°¹øÈ£ ¹è¿­ S
+		N = Integer.parseInt(br.readLine());	// ì •ìˆ˜ N
+		S= new int[N];	// ë§¤ë¬¼ë²ˆí˜¸ ë°°ì—´ S
 		int mid=N/2;
 		
 		StringTokenizer st = new StringTokenizer(br.readLine());
