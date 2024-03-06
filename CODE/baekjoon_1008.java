@@ -1,5 +1,3 @@
-package 동아리_0714;
-
 import java.util.Scanner;
 public class baekjoon_1008 {
 	public static void main(String[] args) {
