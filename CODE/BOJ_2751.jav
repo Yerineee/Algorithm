@@ -1,5 +1,3 @@
-package Áß±Þ_1ÁÖÂ÷;
-
 import java.io.*;
 import java.util.*;
 
