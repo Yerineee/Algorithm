@@ -1,5 +1,3 @@
-package Áß±Ş_2È¸Â÷;
-
 import java.util.*;
 import java.io.*;
 
@@ -8,8 +6,8 @@ public class BOJ_12015 {
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb=new StringBuilder();
 		
-		int N=Integer.parseInt(br.readLine());	// ¼ö¿­ A Å©±â
-		List<Integer> list=new ArrayList<Integer>(); // Áõ°¡ÇÏ´Â ºÎºĞ ÀúÀåÇÒ ¸®½ºÆ®
+		int N=Integer.parseInt(br.readLine());	// ìˆ˜ì—´ A í¬ê¸°
+		List<Integer> list=new ArrayList<Integer>(); // ì¦ê°€í•˜ëŠ” ë¶€ë¶„ ì €ì¥í•  ë¦¬ìŠ¤íŠ¸
 		list.add(0);
 		
 		StringTokenizer st=new StringTokenizer(br.readLine());
