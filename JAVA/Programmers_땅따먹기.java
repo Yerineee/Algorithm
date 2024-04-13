@@ -1,4 +1,4 @@
-// 첫 번째 방법
+// 방법 (1)
 import java.util.Arrays;
 
 class Solution {
@@ -23,7 +23,7 @@ class Solution {
     }
 }
 
-// 두 번째 방법
+// 방법 (2)
 /*
 import java.util.Arrays;
 
