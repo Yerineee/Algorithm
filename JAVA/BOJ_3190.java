@@ -1,3 +1,90 @@
+// 1. HashMap과 Queue 이용
+import java.util.*;
+import java.io.*;
+
+public class BOJ_3190 {
+	static int N, time=0;
+	static int[][] map;	// 보드 (사과가 있으면 1로 표시)
+	static int[] dr = {0, 1, 0, -1};
+	static int[] dc = {1, 0, -1, 0};
+	static HashMap<Integer, String> info = new HashMap<>();	// 방향 변환 정보
+	//static ArrayList<String> snake = new ArrayList<>();		// 뱀의 몸 위치
+	
+	static void move() {
+		Queue<String> snake = new LinkedList<>();
+		int curR = 1;	// 현재 행
+		int curC = 1;	// 현재 열
+		int dir = 0;	// 현재 방향
+		
+		snake.offer("1 1");
+		
+		while(true) {
+			time++;
+			
+			// 방향대로 1칸 이동
+			int nextR = curR+dr[dir];
+			int nextC = curC+dc[dir];
+			
+			// 벽이나 몸에 부딪히면 break
+			if(nextR<=0 || nextR>N || nextC<=0 || nextC>N || snake.contains(nextR+" "+nextC)) {
+				break;
+			}
+			
+			snake.offer(nextR+" "+nextC);
+			
+			// 사과가 없는 칸이면 꼬리 이동
+			if(map[nextR][nextC] == 0) {
+				snake.poll();
+			} else {
+				// 사과가 있는 칸이면, 그 칸에 있던 사과는 없어짐
+				map[nextR][nextC] = 0;
+			}
+			
+			// 방향 정보가 있다면 방향 변환
+			if(info.containsKey(time)) {
+				if(info.get(time).equals("D")) {
+					dir = dir==3 ? 0: dir+1;
+				} else {
+					dir = dir==0 ? 3: dir-1;
+				}
+			}
+			
+			curR = nextR;
+			curC = nextC;
+		}
+	}
+	
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		// 보드의 크기
+		N = Integer.parseInt(br.readLine());
+		map = new int[N+1][N+1];
+		
+		// 사과 개수
+		int K = Integer.parseInt(br.readLine());
+		for(int i=0;i<K;i++) {
+			String[] input = br.readLine().split(" ");
+			map[Integer.parseInt(input[0])][Integer.parseInt(input[1])] = 1;
+		}
+		
+		// 방향 변환 정보
+		int L = Integer.parseInt(br.readLine());
+		for(int i=0;i<L;i++) {
+			String[] input = br.readLine().split(" ");
+			info.put(Integer.parseInt(input[0]), input[1]);
+		}
+		
+		// 뱀 이동 시작
+		move();
+		
+		System.out.println(time);
+	}
+}
+
+
+// 2. ArrayList 이용
+/*
 import java.util.*;
 import java.io.*;
 
@@ -74,3 +161,4 @@ public class BOJ_3190 {
 		System.out.println(time);
 	}
 }
+*/
